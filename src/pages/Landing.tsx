@@ -45,25 +45,27 @@ const Landing = () => {
                 Marble Manager
               </span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               {user ? (
                 <>
-                  <Button variant="ghost" onClick={() => navigate("/dashboard")}>
+                  <Button variant="ghost" onClick={() => navigate("/dashboard")} className="text-xs sm:text-sm px-2 sm:px-4 whitespace-normal h-auto py-2">
                     Dashboard
                   </Button>
-                  <Button onClick={() => navigate("/plans")}>
+                  <Button onClick={() => navigate("/plans")} className="text-xs sm:text-sm px-2 sm:px-4 whitespace-normal h-auto py-2">
                     View Plans
                   </Button>
                 </>
               ) : (
                 <>
-                  <Button variant="ghost" onClick={() => navigate("/login")}>
-                    <LogIn className="mr-2 h-4 w-4" />
-                    Login
+                  <Button variant="ghost" onClick={() => navigate("/login")} className="text-xs sm:text-sm px-2 sm:px-4 whitespace-normal h-auto py-2">
+                    <LogIn className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">Login</span>
+                    <span className="sm:hidden">Log</span>
                   </Button>
-                  <Button onClick={() => navigate("/signup")}>
-                    <UserPlus className="mr-2 h-4 w-4" />
-                    Sign Up
+                  <Button onClick={() => navigate("/signup")} className="text-xs sm:text-sm px-2 sm:px-4 whitespace-normal h-auto py-2">
+                    <UserPlus className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">Sign Up</span>
+                    <span className="sm:hidden">Sign</span>
                   </Button>
                 </>
               )}
@@ -98,10 +100,10 @@ const Landing = () => {
             </div>
 
             <div className="pt-6">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 onClick={() => scrollToSection('problem')}
-                className="text-lg px-10 py-6 hover-scale"
+                className="text-sm sm:text-base md:text-lg px-4 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 hover-scale whitespace-normal h-auto"
               >
                 👉 See How We Bring Transparency
               </Button>
@@ -182,10 +184,10 @@ const Landing = () => {
                 🧱 You wouldn't buy a car without checking its papers -<br />
                 <span className="text-primary">so why buy marble without verifying the truth?</span>
               </p>
-              <Button 
+              <Button
                 size="lg"
                 onClick={() => scrollToSection('solution')}
-                className="hover-scale"
+                className="text-sm sm:text-base md:text-lg px-4 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 hover-scale whitespace-normal h-auto"
               >
                 🔍 Discover the Transparent Way
               </Button>
@@ -253,10 +255,10 @@ const Landing = () => {
                   <strong className="text-foreground">every rupee and every slab is tracked, verified, and reported to you.</strong>
                 </p>
                 <div className="text-center">
-                  <Button 
+                  <Button
                     size="lg"
                     onClick={() => scrollToSection('promise')}
-                    className="hover-scale"
+                    className="text-sm sm:text-base md:text-lg px-4 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 hover-scale whitespace-normal h-auto"
                   >
                     💎 See How It Works
                   </Button>
@@ -330,7 +332,7 @@ const Landing = () => {
                 We stand between you and confusion - and bring clarity to your marble buying journey.
               </p>
               <Link to="/plans">
-                <Button size="lg" className="text-lg px-10 py-6 hover-scale">
+                <Button size="lg" className="text-sm sm:text-base md:text-lg px-4 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 hover-scale whitespace-normal h-auto">
                   🪨 Explore Our Consultancy Plans
                 </Button>
               </Link>
@@ -401,7 +403,7 @@ const Landing = () => {
                 Stop guessing. <span className="text-primary">Start knowing.</span>
               </p>
               <Link to="/plans">
-                <Button size="lg" className="text-xl px-12 py-7 hover-scale">
+                <Button size="lg" className="text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-7 hover-scale whitespace-normal h-auto">
                   👉 See Our Plans and Start with a ₹999 Consultation
                 </Button>
               </Link>
@@ -423,10 +425,10 @@ const Landing = () => {
         href="https://wa.me/918079011187"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform z-50 flex flex-col items-center gap-2"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#25D366] text-white p-3 sm:p-4 rounded-full shadow-lg hover:scale-110 transition-transform z-50 flex flex-col items-center gap-1 sm:gap-2 max-w-[80px] sm:max-w-none"
       >
-        <MessageCircle className="w-8 h-8" />
-        <span className="text-xs font-medium whitespace-nowrap">Get personalised guidance</span>
+        <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" />
+        <span className="text-[10px] sm:text-xs font-medium text-center leading-tight">Get personalised guidance</span>
       </a>
     </div>
   );
